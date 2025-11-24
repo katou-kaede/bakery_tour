@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パン屋めぐりミッション</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo"><img src="images/logo.png" alt="パン屋巡りミッションロゴ"></div>
+    <!-- <nav class="nav">メニュー</nav> -->
+    <div class="mission-button-container">
+      <button id="missionBtn" onclick="showMission()">ミッションを引く</button>
+    </div>
+  </header>
+  <div class="container">
+    <!-- スタート画面 -->
+    <div id="startScreen">
+      <h2>今日行くパン屋の数を入力してください</h2>
+      <input type="number" id="storeCountInput" min="1" max="20" placeholder="例: 3" value="">
+      <br>
+      <button id="startBtn" onclick="startGame()">開始</button>
+    </div>
+
+    <!-- ゲーム画面 -->
+    <div id="gameScreen">
+      <div id="slotsContainer"></div>
+      <div class="game-restart">
+        <button class="game-restart-btn hidden" onclick="restartGame()">リスタート</button>
+      </div>
+    </div>
+
+    <!-- ミッションポップアップ -->
+    <div id="missionPopup">
+      <div class="mission-card">
+        <h3>🎯 ミッションカード</h3>
+        <div class="mission-text" id="missionText">ミッションを引いています...</div>
+        <div class="mission-buttons">
+          <button class="mission-btn use" onclick="useMission()">このミッションで進む</button>
+          <button class="mission-btn reroll" onclick="rerollMission()">もう一回引く</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- コンプリート画面 -->
+    <div id="completeScreen">
+      <div class="complete-content">
+        <h2>🏅 パン屋巡りマスター認定証 🏅</h4>
+        <p>ここに、あなたが全てのパン屋巡りを無事に制覇したことを認定します。</p>
+        <p>あなたの胃袋と好奇心に最大の敬意を表します！</p>
+        <div class="complete-buttons">
+          <button class="board-btn" onclick="closeCompleteScreen()">ボードに戻る</button>
+          <button class="restart-btn" onclick="restartGame()">もう一度始める</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="footer-2">
+    <p class="footer-2__copyright">パン屋巡りミッション@ 2025</p>
+    <a href="https://x.com/yoru_no_madoka">
+      <svg class="footer-2__sns-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="#fff"
+              d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"/>
+      </svg>
+    </a>
+  </footer>
+</body>
+</html>
