@@ -77,16 +77,21 @@ function startGame() {
       </div>
       <div class="form-group">
         <label>買ったパンの名前</label>
+      </div>
+      <div class="input-btn-wrapper">
         <input
           type="text"
           class="bought-item-input"
-          placeholder="入力して完了ボタンで追加"
+          placeholder="例：クロワッサン"
           onkeydown="if(event.key === 'Enter') { event.preventDefault(); addBoughtItem(${i}, this); }"
           inputmode="text"
           enterkeyhint="done"
         >
-        <div class="bought-items" id="boughtItems${i}"></div>
+        <button type="button" class="add-btn" onclick="addBoughtItem(${i}, this.previousElementSibling)">
+          追加
+        </button>
       </div>
+      <div class="bought-items" id="boughtItems${i}"></div>
       <div class="form-group">
         <label>写真をアップロード</label>
         <input type="file" class="photo-input" accept="image/*"

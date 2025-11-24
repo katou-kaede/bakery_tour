@@ -60,7 +60,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 20px 0 5px;
   background: rgba(255, 236, 209); /* 屋根のベース色 */
   border-bottom: 2px solid #e0b070;
   z-index: 1000;
@@ -88,7 +88,7 @@ h1 {
   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
-.site-header .logo { font-size:18px; font-weight:700; color:#D9773A; display:flex; align-items:center; gap:8px; }
+.site-header .logo { display:flex; align-items:center; gap:8px; }
 .site-header .logo img { height:70px; }
 .site-header .nav { font-size:14px; color:#6b513b; }
 
@@ -278,16 +278,22 @@ h1 {
 
 .input-btn-wrapper {
   display: flex;
-  gap: 4px;
+  gap: 0px;
 }
 
 .bought-item-input {
   flex: 1;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
   border: 2px solid #ecf0f1;
   border-radius: 8px 0 0 8px;
   outline: none;
+  border-right: none;
+}
+
+.bought-item-input[type="text"]:focus {
+  outline: none;
+  border-color: #f39c12;
 }
 
 .add-btn {

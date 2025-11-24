@@ -1,0 +1,4 @@
+■Github　毎回パスワードを聞かれないよう設定
+HTTPSでリモートリポジトリを登録
+トークン：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
+cd /mnt/c/Users/kmpy0/Desktop/bakery_tour
