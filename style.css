@@ -281,7 +281,14 @@ h1 {
   gap: 0px;
 }
 
-.bought-item-input {
+.bought-item-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #34495e;
+  font-weight: 600;
+}
+
+.bought-item-input  {
   flex: 1;
   padding: 12px;
   font-size: 16px;

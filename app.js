@@ -75,21 +75,19 @@ function startGame() {
       <div class="mission-display ${i === 0 ? 'empty' : ''}" id="mission${i}">
         ${i === 0 ? 'ミッションを引いてください' : '前の店舗を完了すると表示されます'}
       </div>
-      <div class="form-group">
-        <label>買ったパンの名前</label>
-      </div>
+      <label class="bought-item-label">買ったパンの名前</label>
       <div class="input-btn-wrapper">
-        <input
+          <input
           type="text"
           class="bought-item-input"
           placeholder="例：クロワッサン"
           onkeydown="if(event.key === 'Enter') { event.preventDefault(); addBoughtItem(${i}, this); }"
           inputmode="text"
           enterkeyhint="done"
-        >
-        <button type="button" class="add-btn" onclick="addBoughtItem(${i}, this.previousElementSibling)">
+          >
+          <button type="button" class="add-btn" onclick="addBoughtItem(${i}, this.previousElementSibling)">
           追加
-        </button>
+          </button>
       </div>
       <div class="bought-items" id="boughtItems${i}"></div>
       <div class="form-group">
